@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../../../shared/services/auth.service';
 import { User } from '../../../shared/interfaces/User';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService){
+  constructor(private authService: AuthService, private router: Router){
 
   }
 
@@ -30,7 +31,9 @@ export class LoginComponent {
       if (user != undefined) {
         if(user.password === this.password){
           alert('login success');
+          localStorage.setItem('user', JSON.stringify(user));
           console.log(user);
+          this.router.navigate(['/profile'])
         } else {
           alert('Invalid password');
         }
