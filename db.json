@@ -1,0 +1,70 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "username": "waiter",
+        "password": "waiter123",
+        "role": "waiter"
+      },
+      {
+        "id": 3,
+        "username": "chef",
+        "password": "chef123",
+        "role": "chef"
+      }
+    ],
+    "menu": [
+      {
+        "id": 1,
+        "name": "Burger",
+        "price": 8.99
+      },
+      {
+        "id": 2,
+        "name": "Pizza",
+        "price": 12.99
+      },
+      {
+        "id": 3,
+        "name": "Salad",
+        "price": 6.99
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "userId": 2,
+        "items": [
+          {
+            "menuItemId": 1,
+            "quantity": 2
+          },
+          {
+            "menuItemId": 3,
+            "quantity": 1
+          }
+        ],
+        "total": 24.97,
+        "status": "pending"
+      },
+      {
+        "id": 2,
+        "userId": 3,
+        "items": [
+          {
+            "menuItemId": 2,
+            "quantity": 1
+          }
+        ],
+        "total": 12.99,
+        "status": "completed"
+      }
+    ]
+  }
+  

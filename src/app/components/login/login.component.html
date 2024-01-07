@@ -1,0 +1,51 @@
+<div class="card p-3 col-md-6">
+  <div>
+    <div class="card-title">
+      <p>{{ headding }}</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <form #loginForm="ngForm" (ngSubmit)="handleSubmit()">
+      <div class="form-group m-2">
+        <label for="mail">E-mail</label><br />
+        <input
+          required
+          id="mail"
+          type="email"
+          placeholder="Your E-mail"
+          class="form-control"
+          name="email"
+          [(ngModel)]="email"
+          #mail="ngModel"
+        />
+        <div [hidden]="mail.pristine || mail.valid" class="alert alert-danger">
+          Email cannot be empty
+        </div>
+      </div>
+
+      <div class="form-group m-2">
+        <label for="password">Password</label><br />
+        <input
+          required
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="password"
+          #pass="ngModel"
+        />
+        <div [hidden]="pass.pristine || pass.valid" class="alert alert-danger">
+          Password cannot be empty
+        </div>
+      </div>
+
+      <input
+        class="btn btn-success m-2"
+        type="submit"
+        value="Sign in"
+        [disabled]="loginForm.invalid"
+      />
+    </form>
+  </div>
+</div>

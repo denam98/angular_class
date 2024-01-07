@@ -1,0 +1,14 @@
+.form-field {
+    padding: 1rem;
+}
+
+.login-btn{
+    margin: 1rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
