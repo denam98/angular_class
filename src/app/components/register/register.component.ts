@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -14,14 +14,19 @@ export class RegisterComponent {
   //   firstName: new FormControl('Your first name'),
   //   lastName: new FormControl('Your last name'),
   //   nic: new FormControl('NIC No'),
-  //   gender: new FormControl('')
+  //   gender: new FormControl(''),
+  //   address: new FormGroup({
+  //     no: new FormControl('Home No'),
+  //     street: new FormControl('Street'),
+  //     zone: new FormControl('Zone'),
+  //   })
   // })
 
   myRegForm = this.formBuilder.group({
-    firstName: ['First name'],
-    lastName: ['Last name'],
-    gender: ['Gender'],
-    nic: ['NIC No']
+    firstName: ['First name', Validators.required],
+    lastName: ['Last name', Validators.required],
+    gender: [, Validators.required],
+    nic: ['NIC No', [Validators.required, Validators.pattern('^([0-9]{9}[x|X|v|V]|[0-9]{12})$')]],
   })
 
   handleSubmit(){
