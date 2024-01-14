@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, ProfileComponent],
@@ -30,7 +30,6 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
     MatFormFieldModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    // FormControl,
   ],
   providers: [],
   bootstrap: [AppComponent],
