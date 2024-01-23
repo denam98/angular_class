@@ -16,6 +16,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, ProfileComponent, HomeComponent],
@@ -31,6 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     MatFormFieldModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
