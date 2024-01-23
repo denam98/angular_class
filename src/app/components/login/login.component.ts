@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../../../shared/services/auth.service';
 import { User } from '../../../shared/interfaces/User';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -32,8 +33,9 @@ export class LoginComponent {
         if(user.password === this.password){
           alert('login success');
           localStorage.setItem('user', JSON.stringify(user));
+          this.authService.setIsLoggedinTrue();
           console.log(user);
-          this.router.navigate(['/profile'])
+          this.router.navigate([''])
         } else {
           alert('Invalid password');
         }
