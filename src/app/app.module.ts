@@ -15,9 +15,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, ProfileComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, ProfileComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
